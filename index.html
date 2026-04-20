@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mornin'</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
+
+  <body>
+    <section class="hero-shell">
+      <div class="hero-shell__panel">
+        <div class="hero-shell__top">
+          <a href="#" class="logo hero-shell__logo">
+            <img src="img/mornin_logo_fill.svg" alt="Mornin' logo" />
+          </a>
+
+          <div class="contacts-box">
+            <button class="header__contacts" type="button">Контакты</button>
+
+            <div class="popup">
+              <header>
+                <span>Контакты</span>
+              </header>
+
+              <div class="content">
+                <p>Связаться можно здесь</p>
+
+                <ul class="icons">
+                  <li>
+                    <a href="https://t.me/mornin_rs">
+                      <i class="fab fa-telegram-plane"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/mornin.rs/">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+
+                <p class="direct-title">Или напрямую</p>
+
+                <div class="contacts-info">
+                  <p>Сербия, Панчево</p>
+                  <p>Polina</p>
+                  <p>+381677633741</p>
+                </div>
+
+                <p class="site-link-text">Ссылка нашего сайта</p>
+
+                <div class="field">
+                  <i class="url-icon uil uil-link"></i>
+                  <input
+                    type="text"
+                    readonly
+                    value="https://mornin.rs"
+                    class="url"
+                  />
+                  <button type="button" class="copy-btn">Copy</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="copy-toast-container"></div>
+          </div>
+        </div>
+
+        <div class="brand-hero__inner">
+          <div class="brand-hero__media">
+            <div class="brand-hero__glow"></div>
+
+            <div class="brand-hero__photo-wrap">
+              <img
+                src="img/polina-hero.png"
+                alt="Mornin’"
+                class="brand-hero__photo"
+              />
+            </div>
+          </div>
+
+          <div class="brand-hero__content">
+            <h1 class="brand-hero__title">
+              Сырники <span>Mornin’</span><br />
+              нежные, как облачко
+            </h1>
+
+            <p class="brand-hero__text">
+              Сначала мои сырники покорили друзей, а теперь я готова радовать и
+              вас. Это не просто рецепт, а результат сотен проб и ошибок, пока я
+              не нашла ту самую идеальную пропорцию, которой горжусь.
+            </p>
+
+            <div class="brand-hero__actions">
+              <a
+                href="#catalog"
+                class="brand-hero__btn brand-hero__btn--primary"
+              >
+                Выбрать сырники
+              </a>
+
+              <a
+                href="https://t.me/mornin_rs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="brand-hero__btn brand-hero__btn--secondary"
+              >
+                Написать в Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-section" id="news">
+      <div class="news-section__head">
+        <div>
+          <h2 class="news-section__title">Новости Mornin’</h2>
+          <p class="news-section__subtitle">
+            Листай ленту: Нажми на новость, чтобы прочитать статью полностью.
+          </p>
+        </div>
+      </div>
+
+      <div class="news-feed">
+        <div
+          class="news-feed__track"
+          id="newsTrack"
+          aria-label="Лента новостей"
+        >
+          <article
+            class="news-card"
+            tabindex="0"
+            role="button"
+            data-link="https://t.me/mornin_rs"
+          >
+            <div class="news-card__image-wrap">
+              <img
+                src="img/sirniki_2.jpg"
+                alt="Сырники Mornin’"
+                class="news-card__image"
+              />
+            </div>
+
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                Почему сырники удобно держать в запасе
+              </h3>
+              <p class="news-card__desc">
+                Это быстрый вариант вкусного завтрака, который экономит время
+                утром и помогает начинать день без лишней спешки.
+              </p>
+            </div>
+
+            <div class="news-card__full" hidden>
+              <p>
+                Сырники Mornin’ удобно хранить в морозильнике и доставать тогда,
+                когда нужен быстрый и понятный завтрак без долгой готовки.
+              </p>
+              <p>
+                Достаточно разогреть порцию — и через несколько минут у тебя уже
+                готово что-то тёплое, нежное и сытное. Это особенно удобно в
+                будни, когда утром не хочется тратить много времени на кухню.
+              </p>
+              <p>
+                А ещё такой формат помогает всегда иметь дома запас вкусной еды,
+                которую легко подать и себе, и гостям.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="news-card"
+            tabindex="0"
+            role="button"
+            data-link="https://t.me/mornin_rs"
+          >
+            <div class="news-card__image-wrap">
+              <img
+                src="img/sirniki.jpg"
+                alt="Сырники на завтрак"
+                class="news-card__image"
+              />
+            </div>
+
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                Что делать, когда совсем нет времени на завтрак
+              </h3>
+              <p class="news-card__desc">
+                Когда утро расписано по минутам, хочется не пропускать еду, а
+                выбрать вариант, который готовится быстро и всё равно радует
+                вкусом.
+              </p>
+            </div>
+
+            <div class="news-card__full" hidden>
+              <p>
+                Если утром нет времени готовить полноценный завтрак, важно,
+                чтобы дома было решение, которое не требует лишних действий.
+              </p>
+              <p>
+                Сырники можно быстро разогреть, добавить любимый топпинг, ягоды,
+                мёд или сметану — и завтрак уже выглядит красиво и ощущается как
+                маленькая забота о себе.
+              </p>
+              <p>
+                Именно поэтому мы делаем формат, который помогает сохранить
+                вкус, нежность и удобство одновременно.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="news-card"
+            tabindex="0"
+            role="button"
+            data-link="https://t.me/mornin_rs"
+          >
+            <div class="news-card__image-wrap">
+              <img
+                src="img/done.jpg"
+                alt="Подача сырников"
+                class="news-card__image"
+              />
+            </div>
+
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                Как красиво подать сырники дома без лишних усилий
+              </h3>
+              <p class="news-card__desc">
+                Даже простая подача делает завтрак уютнее: тарелка, немного
+                топпинга, фрукты или сахарная пудра — и настроение уже другое.
+              </p>
+            </div>
+
+            <div class="news-card__full" hidden>
+              <p>
+                Красивый завтрак не обязательно должен быть сложным. Иногда
+                достаточно аккуратной тарелки, одной ложки топпинга и нескольких
+                ягод, чтобы привычная еда выглядела по-новому.
+              </p>
+              <p>
+                Сырники хорошо сочетаются со сгущёнкой, клубничным соусом,
+                Nutella, малиной и другими дополнениями. Можно каждый раз
+                собирать новую подачу и менять настроение блюда.
+              </p>
+              <p>
+                Это простой способ сделать утро приятнее даже в обычный день.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="news-card"
+            tabindex="0"
+            role="button"
+            data-link="https://t.me/mornin_rs"
+          >
+            <div class="news-card__image-wrap">
+              <img
+                src="img/kids.jpg"
+                alt="Нежные сырники"
+                class="news-card__image"
+              />
+            </div>
+
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                Почему заморозка не мешает сырникам оставаться нежными
+              </h3>
+              <p class="news-card__desc">
+                При правильном приготовлении и хранении текстура остаётся
+                приятной, а вкус — таким, ради которого хочется повторить
+                завтрак снова.
+              </p>
+            </div>
+
+            <div class="news-card__full" hidden>
+              <p>
+                Многие переживают, что после заморозки продукт потеряет
+                текстуру, но в случае с хорошими сырниками всё зависит от
+                рецептуры и технологии.
+              </p>
+              <p>
+                Наша задача — сохранить нежность внутри и приятную структуру
+                после разогрева, чтобы результат был предсказуемым и вкусным.
+              </p>
+              <p>
+                Поэтому такой формат отлично подходит для домашнего запаса:
+                удобно, быстро и без ощущения компромисса по качеству.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="news-card"
+            tabindex="0"
+            role="button"
+            data-link="https://t.me/mornin_rs"
+          >
+            <div class="news-card__image-wrap">
+              <img
+                src="img/polinka.jpg"
+                alt="Новости Mornin’"
+                class="news-card__image"
+              />
+            </div>
+
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                Где следить за новостями, новинками и обновлениями Mornin’
+              </h3>
+              <p class="news-card__desc">
+                В Telegram удобно публиковать больше полезного: новости,
+                новинки, детали по заказам и всё, что хочется узнавать первым.
+              </p>
+            </div>
+
+            <div class="news-card__full" hidden>
+              <p>
+                В Telegram мы можем делиться новостями быстрее и подробнее:
+                рассказывать о новинках, вкусах, специальных предложениях и
+                полезных деталях по заказу.
+              </p>
+              <p>
+                Если тебе важно быть в курсе всего раньше остальных, это самый
+                удобный канал для связи с Mornin’.
+              </p>
+              <p>
+                Нажимай кнопку ниже в карточке новости и переходи в Telegram,
+                чтобы не пропускать обновления.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="news-modal" id="newsModal" aria-hidden="true">
+      <div
+        class="news-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="newsModalTitle"
+      >
+        <button
+          class="news-modal__close"
+          id="newsModalClose"
+          type="button"
+          aria-label="Закрыть"
+        ></button>
+
+        <div class="news-modal__body">
+          <div class="news-modal__media">
+            <img src="" alt="" class="news-modal__image" id="newsModalImage" />
+          </div>
+
+          <div class="news-modal__content">
+            <h3 class="news-modal__title" id="newsModalTitle"></h3>
+            <div class="news-modal__text" id="newsModalText"></div>
+
+            <a
+              href="https://t.me/mornin_rs"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="news-modal__telegram"
+              id="newsModalLink"
+            >
+              Больше новостей в Telegram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="catalog" id="catalog">
+      <div class="catalog__section">
+        <div class="catalog__head" id="cart-zone">
+          <img src="img/flag_1.svg" alt="Classic" class="catalog__flag" />
+          <p class="catalog__desc">идеальный баланс на каждый день</p>
+
+          <button
+            class="cart-trigger"
+            id="cartTrigger"
+            type="button"
+            aria-label="Открыть корзину"
+          >
+            <span class="cart-trigger__summary">
+              <span class="cart-trigger__price" id="cartTotal">0</span>
+              <span class="cart-trigger__currency">din</span>
+            </span>
+
+            <span class="cart-trigger__icon-box">
+              <svg
+                class="cart-trigger__icon"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 5H5L7.2 14.2C7.31 14.67 7.58 15.08 7.97 15.36C8.36 15.64 8.84 15.78 9.33 15.75H17.8C18.29 15.75 18.76 15.59 19.14 15.3C19.52 15.01 19.78 14.59 19.88 14.12L21 8H6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="10" cy="19" r="1.5" fill="currentColor" />
+                <circle cx="18" cy="19" r="1.5" fill="currentColor" />
+              </svg>
+
+              <span class="cart-trigger__badge" id="cartBadge" hidden>0</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="catalog__grid">
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="img/classic_s.png"
+                alt="Classic S"
+                class="product-card__image"
+              />
+            </div>
+
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">6 шт</span>
+                <span class="product-card__weight">(~360g)</span>
+              </div>
+              <div class="product-card__name">Разминка</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="classic-s"
+                  data-name="Classic / Разминка"
+                  data-price="780"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">780 <span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="img/classic_m.png"
+                alt="Classic M"
+                class="product-card__image"
+              />
+            </div>
+
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">12 шт</span>
+                <span class="product-card__weight">(~720g)</span>
+              </div>
+              <div class="product-card__name">Войти во вкус</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="classic-m"
+                  data-name="Classic / Войти во вкус"
+                  data-price="1480"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">1480 <span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="img/classic_l.png"
+                alt="Classic L"
+                class="product-card__image"
+              />
+            </div>
+
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">20 шт</span>
+                <span class="product-card__weight">(~1200g)</span>
+              </div>
+              <div class="product-card__name">Мало не покажется</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="classic-l"
+                  data-name="Classic / Мало не покажется"
+                  data-price="2380"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">2380 <span>din</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="catalog__section">
+        <div class="catalog__head">
+          <img src="img/flag_2.svg" alt="Vibe" class="catalog__flag_2" />
+          <p class="catalog__desc">каждый вкус - это разное настроение</p>
+        </div>
+
+        <div class="catalog__grid">
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="./img/vibe_wild.png"
+                alt="Wild"
+                class="product-card__image_vibe"
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">6 шт</span>
+                <span class="product-card__weight">(~360g)</span>
+              </div>
+              <div class="product-card__name">Клубника</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="vibe-strawberry"
+                  data-name="Vibe / Клубника"
+                  data-price="880"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">880<span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card--active">
+            <div class="product-card__image-wrap">
+              <img
+                src="./img/vibe_rise.png"
+                alt="Rais"
+                class="product-card__image_vibe"
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">6 шт</span>
+                <span class="product-card__weight">(~360g)</span>
+              </div>
+              <div class="product-card__name">Изюм</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="vibe-raisin"
+                  data-name="Vibe / Изюм"
+                  data-price="880"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">880<span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="./img/vibe_coco.png"
+                alt="Coco"
+                class="product-card__image_vibe"
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">6 шт</span>
+                <span class="product-card__weight">(~360g)</span>
+              </div>
+              <div class="product-card__name">Кокос</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="vibe-coconut"
+                  data-name="Vibe / Кокос"
+                  data-price="880"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">880<span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="./img/vibe_choc.png"
+                alt="Choc"
+                class="product-card__image_vibe"
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">6 шт</span>
+                <span class="product-card__weight">(~360g)</span>
+              </div>
+              <div class="product-card__name">Шоколад</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="vibe-chocolate"
+                  data-name="Vibe / Шоколад"
+                  data-price="880"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">880<span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="./img/vibe_pink.png"
+                alt="Pink"
+                class="product-card__image_vibe"
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__top">
+                <span class="product-card__count">6 шт</span>
+                <span class="product-card__weight">(~360g)</span>
+              </div>
+              <div class="product-card__name">Малина</div>
+              <div class="product-card__bottom">
+                <button
+                  class="product-card__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="vibe-raspberry"
+                  data-name="Vibe / Малина"
+                  data-price="880"
+                >
+                  Добавить +
+                </button>
+                <div class="product-card__price">880<span>din</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="catalog__section">
+        <div class="catalog__head">
+          <img src="img/flag_3.svg" alt="Topping" class="catalog__flag_3" />
+          <p class="catalog__desc">
+            топпинги — это финальный штрих в подаче сырников
+          </p>
+        </div>
+
+        <div class="sauces-grid">
+          <article class="sauce-item">
+            <div class="sauce-item__media">
+              <img
+                src="img/condensed_milk.png"
+                alt="Сгущёнка"
+                class="sauce-item__image"
+              />
+            </div>
+
+            <div class="sauce-item__body">
+              <span class="sauce-item__volume">30 мл</span>
+              <h3 class="sauce-item__title">Сгущёнка</h3>
+
+              <div class="sauce-item__footer">
+                <button
+                  class="sauce-item__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="topping-condensed"
+                  data-name="Топпинг / Сгущёнка 30 мл"
+                  data-price="50"
+                >
+                  Добавить +
+                </button>
+
+                <div class="sauce-item__price">50 <span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sauce-item">
+            <div class="sauce-item__media">
+              <img
+                src="img/strawberry_sauce.png"
+                alt="Клубника"
+                class="sauce-item__image"
+              />
+            </div>
+
+            <div class="sauce-item__body">
+              <span class="sauce-item__volume">30 мл</span>
+              <h3 class="sauce-item__title">Клубника</h3>
+
+              <div class="sauce-item__footer">
+                <button
+                  class="sauce-item__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="topping-strawberry"
+                  data-name="Топпинг / Клубника 30 мл"
+                  data-price="50"
+                >
+                  Добавить +
+                </button>
+
+                <div class="sauce-item__price">50 <span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sauce-item">
+            <div class="sauce-item__media">
+              <img
+                src="img/nutella_sauce.png"
+                alt="Nutella"
+                class="sauce-item__image"
+              />
+            </div>
+
+            <div class="sauce-item__body">
+              <span class="sauce-item__volume">30 мл</span>
+              <h3 class="sauce-item__title">Nutella</h3>
+
+              <div class="sauce-item__footer">
+                <button
+                  class="sauce-item__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="topping-nutella"
+                  data-name="Топпинг / Nutella 30 мл"
+                  data-price="50"
+                >
+                  Добавить +
+                </button>
+
+                <div class="sauce-item__price">50 <span>din</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sauce-item">
+            <div class="sauce-item__media">
+              <img
+                src="img/raspberry_sauce.png"
+                alt="Малина"
+                class="sauce-item__image"
+              />
+            </div>
+
+            <div class="sauce-item__body">
+              <span class="sauce-item__volume">30 мл</span>
+              <h3 class="sauce-item__title">Малина</h3>
+
+              <div class="sauce-item__footer">
+                <button
+                  class="sauce-item__btn"
+                  type="button"
+                  data-add-to-cart
+                  data-id="topping-raspberry"
+                  data-name="Топпинг / Малина 30 мл"
+                  data-price="50"
+                >
+                  Добавить +
+                </button>
+
+                <div class="sauce-item__price">50 <span>din</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-drawer__header">
+        <h3 class="cart-drawer__title">Ваш заказ</h3>
+        <button
+          class="cart-drawer__close"
+          id="cartCloseBtn"
+          type="button"
+          aria-label="Закрыть"
+        ></button>
+      </div>
+
+      <section class="cart-step cart-step--active" id="cartItemsStep">
+        <div class="cart-list" id="cartList">
+          <div class="cart-empty">Корзина пока пуста</div>
+        </div>
+
+        <div class="cart-footer">
+          <div class="cart-footer__row">
+            <span>Итого</span>
+            <strong id="drawerTotal">0 din</strong>
+          </div>
+
+          <button
+            class="cart-primary-btn"
+            id="goToCheckoutBtn"
+            type="button"
+            disabled
+          >
+            Перейти к оформлению
+          </button>
+        </div>
+      </section>
+
+      <form class="cart-step" id="checkoutStep">
+        <div class="cart-form">
+          <label class="cart-field">
+            <span>ФИО</span>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Введите ФИО"
+              required
+            />
+          </label>
+
+          <label class="cart-field">
+            <span>Номер телефона</span>
+            <input type="tel" name="phone" placeholder="+381..." required />
+          </label>
+
+          <div class="cart-field">
+            <span>Мессенджер</span>
+
+            <div class="messenger-options">
+              <label class="messenger-option">
+                <input
+                  type="radio"
+                  name="messenger"
+                  value="Telegram"
+                  required
+                />
+                <span>Telegram</span>
+              </label>
+
+              <label class="messenger-option">
+                <input type="radio" name="messenger" value="WhatsApp" />
+                <span>Instagram</span>
+              </label>
+            </div>
+          </div>
+
+          <label class="cart-field">
+            <span>Контакт в мессенджере</span>
+            <input
+              type="text"
+              name="messengerContact"
+              placeholder="@username или номер, если отличается"
+            />
+          </label>
+
+          <label class="cart-field">
+            <span>Комментарий к заказу</span>
+            <textarea
+              name="comment"
+              rows="4"
+              placeholder="Необязательно"
+            ></textarea>
+          </label>
+        </div>
+
+        <div class="cart-consent" id="cartConsentBlock">
+          <label class="cart-consent__label">
+            <input type="checkbox" name="privacyConsent" id="privacyConsent" />
+            <span class="cart-consent__text">
+              Я согласен на обработку моих персональных данных в целях обработки
+              и выполнения заказа и ознакомлен с правилами защиты персональных
+              данных в соответствии с
+              <a
+                href="https://www.paragraf.rs/propisi/zakon_o_zastiti_podataka_o_licnosti.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                в соответствии с Законом о защите персональных данных </a
+              >.
+            </span>
+          </label>
+
+          <div class="cart-consent__error" id="privacyConsentError">
+            Необходимо подтвердить согласие на обработку персональных данных.
+          </div>
+        </div>
+
+        <div class="cart-footer cart-footer--form">
+          <button class="cart-secondary-btn" id="backToCartBtn" type="button">
+            Назад
+          </button>
+          <button class="cart-primary-btn" id="submitOrderBtn" type="submit">
+            Готово
+          </button>
+        </div>
+      </form>
+    </aside>
+
+    <div class="cart-popup" id="cartSuccessPopup">
+      <div class="cart-popup__body">
+        <p>
+          Спасибо за заказ. Ожидайте, пока с вами свяжется менеджер для
+          уточнения деталей.
+        </p>
+        <button
+          class="cart-primary-btn"
+          id="closeSuccessPopupBtn"
+          type="button"
+        >
+          Понятно
+        </button>
+      </div>
+    </div>
+
+    <div class="back-to-cart">
+      <a href="#cart-zone" class="back-to-cart__btn" id="backToCartLink"
+        >Вернуться к корзине</a
+      >
+    </div>
+
+    <footer class="footer" id="contacts">
+      <div class="footer__container">
+        <div class="footer__main">
+          <a href="#" class="footer__logo">
+            <img src="img/mornin_logo_fill.svg" alt="Mornin' logo" />
+          </a>
+
+          <div class="footer__info">
+            <p class="footer__text">
+              Нежные домашние сырники, которые легко заказать для уютного
+              завтрака или запаса в морозилке.
+            </p>
+
+            <div class="footer__contacts">
+              <span class="footer__contact-item">Сербия, Панчево</span>
+
+              <a href="tel:+381677633741" class="footer__contact-link">
+                +381 67 763 3741
+              </a>
+            </div>
+
+            <div class="footer__socials">
+              <a
+                href="https://t.me/mornin_rs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__social"
+                aria-label="Telegram"
+              >
+                <i class="fab fa-telegram-plane"></i>
+                <span>Telegram</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/mornin.rs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__social"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copy">© 2026 Mornin’. Все права защищены.</p>
+          <p class="footer__made">С любовью к вкусным завтракам</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
