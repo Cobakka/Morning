@@ -3066,3 +3066,83 @@ body.news-modal-lock {
     padding-bottom: calc(18px + env(safe-area-inset-bottom));
   }
 }
+
+
+@media (max-width: 768px) {
+  .mobile-ribbon-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .mobile-ribbon {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(240px, 82vw);
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 2px 14px;
+    margin: 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #0e0d0d #d9d0bf;
+  }
+
+  .mobile-ribbon > * {
+    min-width: 0;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  .mobile-ribbon::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .mobile-ribbon::-webkit-scrollbar-track {
+    background: #d9d0bf;
+    border-radius: 999px;
+  }
+
+  .mobile-ribbon::-webkit-scrollbar-thumb {
+    background: #0e0d0d;
+    border-radius: 999px;
+  }
+
+  
+  .mobile-ribbon-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: calc(100% - 12px);
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(244, 239, 228, 0), #f4efe4 85%);
+  }
+
+
+  .mobile-ribbon-wrap::before {
+    content: "листай →";
+    position: absolute;
+    right: 8px;
+    bottom: -2px;
+    font-size: 11px;
+    line-height: 1;
+    color: rgba(14, 13, 13, 0.65);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+ 
+  .mobile-ribbon > .card,
+  .mobile-ribbon > .catalog__item,
+  .mobile-ribbon > .product-card,
+  .mobile-ribbon > .item,
+  .mobile-ribbon > .review,
+  .mobile-ribbon > .flag,
+  .mobile-ribbon > .advantage,
+  .mobile-ribbon > .vibe__item {
+    width: 100%;
+  }
+}
