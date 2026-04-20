@@ -62,6 +62,7 @@ app.post("/api/order", async (req, res) => {
     const messenger = normalizeText(customer.messenger);
     const messengerContact = normalizeText(customer.messengerContact);
     const comment = normalizeText(customer.comment);
+    const delivery = normalizeText(customer.delivery);
 
     if (!fullName) {
       return res.status(400).json({
@@ -70,17 +71,17 @@ app.post("/api/order", async (req, res) => {
       });
     }
 
-    if (!phone) {
-      return res.status(400).json({
-        ok: false,
-        message: "Укажите номер телефона",
-      });
-    }
-
     if (!messenger) {
       return res.status(400).json({
         ok: false,
         message: "Укажите мессенджер",
+      });
+    }
+
+    if (!delivery) {
+      return res.status(400).json({
+        ok: false,
+        message: "Выберите доставку",
       });
     }
 
@@ -106,9 +107,10 @@ app.post("/api/order", async (req, res) => {
       "🛒 Новый заказ",
       "",
       `👤 ФИО: ${fullName}`,
-      `📞 Телефон: ${phone}`,
+      `📞 Телефон: ${phone || "не указан"}`,
       `💬 Мессенджер: ${messenger}`,
       `🔗 Контакт: ${messengerContact || "не указан"}`,
+      `🚚 Доставка: ${delivery}`,
       comment ? `📝 Комментарий: ${comment}` : null,
       "",
       "📦 Состав заказа:",
