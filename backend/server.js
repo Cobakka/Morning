@@ -2,11 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const axios = require("axios");
+const path = require("path");
 
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
@@ -28,6 +29,8 @@ app.use(
 
 app.use(express.json({ limit: "1mb" }));
 
+app.use(express.static(path.join(__dirname, "public")));
+
 function normalizeText(value) {
   return String(value || "")
     .replace(/\s+/g, " ")
@@ -41,10 +44,6 @@ function formatPrice(value) {
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   next();
-});
-
-app.get("/", (req, res) => {
-  res.send("Server is running");
 });
 
 app.get("/api/health", (req, res) => {
@@ -155,6 +154,10 @@ app.post("/api/order", async (req, res) => {
   }
 });
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server started on http://127.0.0.1:${PORT}`);
+  console.log(`Server started on port ${PORT}`);
 });
