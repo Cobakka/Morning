@@ -3067,7 +3067,6 @@ body.news-modal-lock {
   }
 }
 
-
 @media (max-width: 768px) {
   .mobile-ribbon-wrap {
     position: relative;
@@ -3077,7 +3076,7 @@ body.news-modal-lock {
   .mobile-ribbon {
     display: grid !important;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(240px, 82vw);
+    grid-auto-columns: 82vw;
     gap: 12px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -3086,13 +3085,11 @@ body.news-modal-lock {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
-    scrollbar-color: #0e0d0d #d9d0bf;
   }
 
   .mobile-ribbon > * {
     min-width: 0;
     scroll-snap-align: start;
-    flex-shrink: 0;
   }
 
   .mobile-ribbon::-webkit-scrollbar {
@@ -3109,7 +3106,17 @@ body.news-modal-lock {
     border-radius: 999px;
   }
 
-  
+  .mobile-ribbon-wrap::before {
+    content: "листай →";
+    position: absolute;
+    right: 8px;
+    bottom: -2px;
+    font-size: 11px;
+    color: rgba(14, 13, 13, 0.65);
+    pointer-events: none;
+    z-index: 2;
+  }
+
   .mobile-ribbon-wrap::after {
     content: "";
     position: absolute;
@@ -3121,28 +3128,15 @@ body.news-modal-lock {
     background: linear-gradient(to right, rgba(244, 239, 228, 0), #f4efe4 85%);
   }
 
-
-  .mobile-ribbon-wrap::before {
-    content: "листай →";
-    position: absolute;
-    right: 8px;
-    bottom: -2px;
-    font-size: 11px;
-    line-height: 1;
-    color: rgba(14, 13, 13, 0.65);
-    pointer-events: none;
-    z-index: 2;
+  .catalog__grid.mobile-ribbon,
+  .sauces-grid.mobile-ribbon,
+  .news-feed__track.mobile-ribbon {
+    grid-template-columns: none !important;
   }
 
- 
-  .mobile-ribbon > .card,
-  .mobile-ribbon > .catalog__item,
-  .mobile-ribbon > .product-card,
-  .mobile-ribbon > .item,
-  .mobile-ribbon > .review,
-  .mobile-ribbon > .flag,
-  .mobile-ribbon > .advantage,
-  .mobile-ribbon > .vibe__item {
+  .product-card,
+  .sauce-item,
+  .news-card {
     width: 100%;
   }
 }
