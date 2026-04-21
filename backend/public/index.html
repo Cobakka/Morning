@@ -876,163 +876,154 @@
             />
           </label>
 
-          <form class="cart-step" id="checkoutStep">
-  <div class="cart-form">
-    <label class="cart-field">
-      <span>ФИО</span>
-      <input
-        type="text"
-        name="fullName"
-        placeholder="Введите ФИО"
-        required
-      />
-    </label>
+          <div class="cart-field">
+            <span>Мессенджер <em>для связи</em></span>
 
-    <div class="cart-field">
-      <span>Мессенджер <em>для связи</em></span>
+            <div class="messenger-options">
+              <label class="messenger-option">
+                <input
+                  type="radio"
+                  name="messenger"
+                  value="Telegram"
+                  required
+                />
+                <span>Telegram</span>
+              </label>
 
-      <div class="messenger-options">
-        <label class="messenger-option">
-          <input
-            type="radio"
-            name="messenger"
-            value="Telegram"
-            required
-          />
-          <span>Telegram</span>
-        </label>
+              <label class="messenger-option">
+                <input type="radio" name="messenger" value="Instagram" />
+                <span>Instagram</span>
+              </label>
+            </div>
+          </div>
 
-        <label class="messenger-option">
-          <input type="radio" name="messenger" value="Instagram" />
-          <span>Instagram</span>
-        </label>
-      </div>
-    </div>
+          <label class="cart-field">
+            <span>Контакт в мессенджере</span>
+            <input
+              type="text"
+              name="messengerContact"
+              placeholder="@username или номер"
+            />
+          </label>
 
-    <label class="cart-field">
-      <span>Контакт в мессенджере</span>
-      <input
-        type="text"
-        name="messengerContact"
-        placeholder="@username или номер"
-      />
-    </label>
+          <label class="cart-field">
+            <span>Номер телефона <em>(необязательно)</em></span>
+            <input type="tel" name="phone" placeholder="+381..." />
+          </label>
 
-    <label class="cart-field">
-      <span>Номер телефона <em>(необязательно)</em></span>
-      <input type="tel" name="phone" placeholder="+381..." />
-    </label>
+          <label class="cart-field">
+            <span>Комментарий к заказу</span>
+            <textarea
+              name="comment"
+              rows="4"
+              placeholder="Необязательно"
+            ></textarea>
+          </label>
 
-    <label class="cart-field">
-      <span>Комментарий к заказу</span>
-      <textarea
-        name="comment"
-        rows="4"
-        placeholder="Необязательно"
-      ></textarea>
-    </label>
+          <div class="cart-field cart-field--delivery">
+            <span class="cart-field__title cart-field__title--accent">
+              Доставка
+            </span>
 
-    <div class="cart-field cart-field--delivery">
-      <span class="cart-field__title cart-field__title--accent">Доставка</span>
+            <div class="delivery-options">
+              <label class="delivery-option">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="Панчево центр — бесплатно"
+                  required
+                />
+                <span>
+                  <strong>Панчево центр</strong>
+                  <small>Бесплатно</small>
+                </span>
+              </label>
 
-      <div class="delivery-options">
-        <label class="delivery-option">
-          <input
-            type="radio"
-            name="delivery"
-            value="Панчево центр — бесплатно"
-            required
-          />
-          <span>
-            <strong>Панчево центр</strong>
-            <small>Бесплатно</small>
-          </span>
-        </label>
+              <label class="delivery-option">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="Белград самовывоз (Waterfront) — бесплатно"
+                />
+                <span>
+                  <strong>Белград самовывоз</strong>
+                  <small>Waterfront · бесплатно</small>
+                </span>
+              </label>
 
-        <label class="delivery-option">
-          <input
-            type="radio"
-            name="delivery"
-            value="Белград самовывоз (Waterfront) — бесплатно"
-          />
-          <span>
-            <strong>Белград самовывоз</strong>
-            <small>Waterfront · бесплатно</small>
-          </span>
-        </label>
+              <label class="delivery-option">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="Панчево отдаленные районы — 300 din"
+                />
+                <span>
+                  <strong>Панчево отдаленные районы</strong>
+                  <small>300 din</small>
+                </span>
+              </label>
 
-        <label class="delivery-option">
-          <input
-            type="radio"
-            name="delivery"
-            value="Панчево отдаленные районы — 300 din"
-          />
-          <span>
-            <strong>Панчево отдаленные районы</strong>
-            <small>300 din</small>
-          </span>
-        </label>
+              <label class="delivery-option">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="Белград доставка на дом — по договоренности, от 500 din"
+                />
+                <span>
+                  <strong>Белград</strong>
+                  <small>на дом · по договоренности, от 500 din</small>
+                </span>
+              </label>
 
-        <label class="delivery-option">
-          <input
-            type="radio"
-            name="delivery"
-            value="Белград доставка на дом — по договоренности, от 500 din"
-          />
-          <span>
-            <strong>Белград</strong>
-            <small>на дом · по договоренности, от 500 din</small>
-          </span>
-        </label>
+              <label class="delivery-option delivery-option--wide">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="Панчево самовывоз (Матије Гупца 33) — скидка 5%"
+                />
+                <span>
+                  <strong>Панчево самовывоз</strong>
+                  <small>Матије Гупца 33 · скидка 5%</small>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
 
-        <label class="delivery-option delivery-option--wide">
-          <input
-            type="radio"
-            name="delivery"
-            value="Панчево самовывоз (Матије Гупца 33) — скидка 5%"
-          />
-          <span>
-            <strong>Панчево самовывоз</strong>
-            <small>Матије Гупца 33 · скидка 5%</small>
-          </span>
-        </label>
-      </div>
-    </div>
-  </div>
+        <div class="cart-footer cart-footer--checkout">
+          <div class="cart-consent" id="cartConsentBlock">
+            <label class="cart-consent__label">
+              <input type="checkbox" name="privacyConsent" id="privacyConsent" />
+              <span class="cart-consent__text">
+                Я согласен на обработку моих персональных данных в целях
+                оформления и выполнения заказа и ознакомлен(а) с
+                <a
+                  href="https://www.paragraf.rs/propisi/zakon_o_zastiti_podataka_o_licnosti.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Законом о защите персональных данных
+                </a>
+                .
+              </span>
+            </label>
 
-  <div class="cart-footer cart-footer--checkout">
-    <div class="cart-consent" id="cartConsentBlock">
-      <label class="cart-consent__label">
-        <input type="checkbox" name="privacyConsent" id="privacyConsent" />
-        <span class="cart-consent__text">
-          Я согласен на обработку моих персональных данных в целях
-          оформления и выполнения заказа и ознакомлен(а) с
-          <a
-            href="https://www.paragraf.rs/propisi/zakon_o_zastiti_podataka_o_licnosti.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Законом о защите персональных данных
-          </a>
-          .
-        </span>
-      </label>
+            <div class="cart-consent__error" id="privacyConsentError">
+              Необходимо подтвердить согласие на обработку персональных данных.
+            </div>
+          </div>
 
-      <div class="cart-consent__error" id="privacyConsentError">
-        Необходимо подтвердить согласие на обработку персональных данных.
-      </div>
-    </div>
-
-    <div class="cart-footer__actions">
-      <button class="cart-secondary-btn" id="backToCartBtn" type="button">
-        Назад
-      </button>
-      <button class="cart-primary-btn" id="submitOrderBtn" type="submit">
-        Готово
-      </button>
-    </div>
-  </div>
-</form>
+          <div class="cart-footer__actions">
+            <button class="cart-secondary-btn" id="backToCartBtn" type="button">
+              Назад
+            </button>
+            <button class="cart-primary-btn" id="submitOrderBtn" type="submit">
+              Готово
+            </button>
+          </div>
+        </div>
+      </form>
+    </aside>
 
     <div class="cart-popup" id="cartSuccessPopup">
       <div class="cart-popup__body">
@@ -1051,9 +1042,9 @@
     </div>
 
     <div class="back-to-cart">
-      <a href="#cart-zone" class="back-to-cart__btn" id="backToCartLink"
-        >Вернуться к корзине</a
-      >
+      <a href="#cart-zone" class="back-to-cart__btn" id="backToCartLink">
+        Вернуться к корзине
+      </a>
     </div>
 
     <footer class="footer" id="contacts">
