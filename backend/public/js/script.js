@@ -1154,17 +1154,18 @@ if (checkoutStep) {
 
     const formData = new FormData(checkoutStep);
 
-    const payload = {
-      customer: {
-        fullName: normalizeText(formData.get("fullName")),
-        phone: normalizeText(formData.get("phone")),
-        messenger: getSelectedMessengerValue(checkoutStep, formData),
-        messengerContact: normalizeText(formData.get("messengerContact")),
-        comment: normalizeText(formData.get("comment")),
-      },
-      items: state.items,
-      total: getTotalPrice(),
-    };
+  const payload = {
+  customer: {
+    fullName: normalizeText(formData.get("fullName")),
+    phone: normalizeText(formData.get("phone")),
+    messenger: getSelectedMessengerValue(checkoutStep, formData),
+    messengerContact: normalizeText(formData.get("messengerContact")),
+    comment: normalizeText(formData.get("comment")),
+    delivery: normalizeText(formData.get("delivery")),
+  },
+  items: state.items,
+  total: getTotalPrice(),
+};
 
     try {
       await sendOrder(payload);
