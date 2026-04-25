@@ -739,6 +739,50 @@ function getDatasetValue(el, keys) {
   return "";
 }
 
+function getSelectedProductOption(card) {
+  if (!card) return null;
+
+  return card.querySelector("[data-product-option]:checked");
+}
+
+function syncProductCardOption(card) {
+  const selectedOption = getSelectedProductOption(card);
+  if (!selectedOption) return;
+
+  const countEl = card.querySelector(".product-card__count");
+  const weightEl = card.querySelector(".product-card__weight");
+  const priceEl = card.querySelector(".product-card__price");
+  const addBtn = card.querySelector("[data-add-to-cart]");
+
+  const count = getDatasetValue(selectedOption, ["count", "size", "sizeLabel"]);
+  const weight = getDatasetValue(selectedOption, ["weight"]);
+  const price = parsePrice(getDatasetValue(selectedOption, ["price"]));
+  const id = getDatasetValue(selectedOption, ["id", "productId", "itemId", "sku"]);
+  const name = getDatasetValue(selectedOption, ["name", "title", "productName", "itemName"]);
+
+  if (countEl && count) countEl.textContent = count;
+  if (weightEl && weight) weightEl.textContent = weight;
+  if (priceEl && price) {
+    priceEl.innerHTML = `${formatPrice(price)} <span>din</span>`;
+  }
+
+  if (addBtn) {
+    if (!addBtn.dataset.defaultLabel) {
+      addBtn.dataset.defaultLabel = "Добавить +";
+    }
+
+    if (id) addBtn.dataset.id = id;
+    if (name) addBtn.dataset.name = name;
+    if (price) addBtn.dataset.price = String(price);
+  }
+}
+
+function syncAllProductCardOptions() {
+  document.querySelectorAll(".product-card").forEach((card) => {
+    syncProductCardOption(card);
+  });
+}
+
 function isIgnoredButton(btn) {
   if (!btn) return true;
 
@@ -857,7 +901,10 @@ function getPossibleCard(btn) {
 }
 
 function getProductName(card, btn) {
+  const selectedOption = getSelectedProductOption(card);
+
   return (
+    getDatasetValue(selectedOption, ["name", "title", "productName", "itemName"]) ||
     getDatasetValue(btn, ["name", "title", "productName", "itemName"]) ||
     getDatasetValue(card, ["name", "title", "productName", "itemName"]) ||
     getTextFromSelectors(card, [
@@ -884,7 +931,12 @@ function getProductName(card, btn) {
 }
 
 function getProductPrice(card, btn) {
+  const selectedOption = getSelectedProductOption(card);
+
   return (
+    parsePrice(
+      getDatasetValue(selectedOption, ["price", "productPrice", "itemPrice", "cost"]),
+    ) ||
     parsePrice(
       getDatasetValue(btn, ["price", "productPrice", "itemPrice", "cost"]),
     ) ||
@@ -906,7 +958,10 @@ function getProductPrice(card, btn) {
 }
 
 function getProductId(card, btn, name, price) {
+  const selectedOption = getSelectedProductOption(card);
+
   return (
+    getDatasetValue(selectedOption, ["id", "productId", "itemId", "sku"]) ||
     getDatasetValue(btn, ["id", "productId", "itemId", "sku"]) ||
     getDatasetValue(card, ["id", "productId", "itemId", "sku"]) ||
     `${slugify(name)}-${price}`
@@ -1017,6 +1072,17 @@ function syncCatalogButtons() {
       syncSingleCatalogButton(btn);
     });
 }
+
+document.addEventListener("change", (event) => {
+  const option = event.target.closest("[data-product-option]");
+  if (!option) return;
+
+  const card = option.closest(".product-card");
+  if (!card) return;
+
+  syncProductCardOption(card);
+  syncCatalogButtons();
+});
 
 document.addEventListener("click", handleAddToCart);
 
@@ -1154,18 +1220,18 @@ if (checkoutStep) {
 
     const formData = new FormData(checkoutStep);
 
-  const payload = {
-  customer: {
-    fullName: normalizeText(formData.get("fullName")),
-    phone: normalizeText(formData.get("phone")),
-    messenger: getSelectedMessengerValue(checkoutStep, formData),
-    messengerContact: normalizeText(formData.get("messengerContact")),
-    comment: normalizeText(formData.get("comment")),
-    delivery: normalizeText(formData.get("delivery")),
-  },
-  items: state.items,
-  total: getTotalPrice(),
-};
+    const payload = {
+      customer: {
+        fullName: normalizeText(formData.get("fullName")),
+        phone: normalizeText(formData.get("phone")),
+        messenger: getSelectedMessengerValue(checkoutStep, formData),
+        messengerContact: normalizeText(formData.get("messengerContact")),
+        comment: normalizeText(formData.get("comment")),
+        delivery: normalizeText(formData.get("delivery")),
+      },
+      items: state.items,
+      total: getTotalPrice(),
+    };
 
     try {
       await sendOrder(payload);
@@ -1189,6 +1255,7 @@ if (checkoutStep) {
   });
 }
 
+syncAllProductCardOptions();
 renderCart();
 
 const newsTrack = document.getElementById("newsTrack");

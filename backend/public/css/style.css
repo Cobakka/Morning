@@ -3346,3 +3346,90 @@ body.news-modal-lock {
 .cart-consent--error .cart-consent__error {
   display: block;
 }
+
+/* Выбор размера набора внутри Vibe-карточек */
+.product-card__sizes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 5px 18px;
+}
+
+.product-card__size-option {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.product-card__size-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product-card__size-option span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 999px;
+  background: #fffdf7;
+  color: #111;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.product-card__size-option:hover span {
+  border-color: #f2a000;
+  transform: translateY(-1px);
+}
+
+.product-card__size-option input:checked + span {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.12);
+}
+
+.product-card__size-option input:focus-visible + span {
+  border-color: #f2a000;
+  box-shadow: 0 0 0 4px rgba(242, 160, 0, 0.2);
+}
+
+@media (max-width: 560px) {
+  .product-card__sizes {
+    gap: 6px;
+    margin: 0 2px 14px;
+  }
+
+  .product-card__size-option span {
+    min-height: 30px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .product-card__sizes {
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+
+  .product-card__size-option span {
+    min-height: 28px;
+    padding: 0 6px;
+    font-size: 11px;
+  }
+}

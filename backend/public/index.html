@@ -535,165 +535,415 @@
       </div>
 
       <div class="catalog__section">
-        <div class="catalog__head">
-          <img src="img/flag_2.svg" alt="Vibe" class="catalog__flag_2" />
-          <p class="catalog__desc">каждый вкус - это разное настроение</p>
+  <div class="catalog__head">
+    <img src="img/flag_2.svg" alt="Vibe" class="catalog__flag_2" />
+    <p class="catalog__desc">каждый вкус - это разное настроение</p>
+  </div>
+
+  <div class="mobile-ribbon-wrap">
+    <div class="catalog__grid mobile-ribbon">
+      <article class="product-card">
+        <div class="product-card__image-wrap">
+          <img
+            src="./img/vibe_wild.png"
+            alt="Wild"
+            class="product-card__image_vibe"
+          />
         </div>
+        <div class="product-card__info">
+          <div class="product-card__top">
+            <span class="product-card__count">6 шт</span>
+            <span class="product-card__weight">(~360g)</span>
+          </div>
 
-        <div class="mobile-ribbon-wrap">
-          <div class="catalog__grid mobile-ribbon">
-            <article class="product-card">
-              <div class="product-card__image-wrap">
-                <img
-                  src="./img/vibe_wild.png"
-                  alt="Wild"
-                  class="product-card__image_vibe"
-                />
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__top">
-                  <span class="product-card__count">6 шт</span>
-                  <span class="product-card__weight">(~360g)</span>
-                </div>
-                <div class="product-card__name">Клубника</div>
-                <div class="product-card__bottom">
-                  <button
-                    class="product-card__btn"
-                    type="button"
-                    data-add-to-cart
-                    data-id="vibe-strawberry"
-                    data-name="Vibe / Клубника"
-                    data-price="880"
-                  >
-                    Добавить +
-                  </button>
-                  <div class="product-card__price">880<span>din</span></div>
-                </div>
-              </div>
-            </article>
+          <div class="product-card__sizes" aria-label="Размер набора">
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-strawberry-size"
+                value="s"
+                data-product-option
+                data-id="vibe-strawberry-s"
+                data-name="Vibe / Клубника / 6 шт"
+                data-price="890"
+                data-count="6 шт"
+                data-weight="(~360g)"
+                checked
+              />
+              <span>6 шт</span>
+            </label>
 
-            <article class="product-card product-card--active">
-              <div class="product-card__image-wrap">
-                <img
-                  src="./img/vibe_rise.png"
-                  alt="Rais"
-                  class="product-card__image_vibe"
-                />
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__top">
-                  <span class="product-card__count">6 шт</span>
-                  <span class="product-card__weight">(~360g)</span>
-                </div>
-                <div class="product-card__name">Изюм</div>
-                <div class="product-card__bottom">
-                  <button
-                    class="product-card__btn"
-                    type="button"
-                    data-add-to-cart
-                    data-id="vibe-raisin"
-                    data-name="Vibe / Изюм"
-                    data-price="880"
-                  >
-                    Добавить +
-                  </button>
-                  <div class="product-card__price">880<span>din</span></div>
-                </div>
-              </div>
-            </article>
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-strawberry-size"
+                value="m"
+                data-product-option
+                data-id="vibe-strawberry-m"
+                data-name="Vibe / Клубника / 12 шт"
+                data-price="1690"
+                data-count="12 шт"
+                data-weight="(~720g)"
+              />
+              <span>12 шт</span>
+            </label>
 
-            <article class="product-card">
-              <div class="product-card__image-wrap">
-                <img
-                  src="./img/vibe_coco.png"
-                  alt="Coco"
-                  class="product-card__image_vibe"
-                />
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__top">
-                  <span class="product-card__count">6 шт</span>
-                  <span class="product-card__weight">(~360g)</span>
-                </div>
-                <div class="product-card__name">Кокос</div>
-                <div class="product-card__bottom">
-                  <button
-                    class="product-card__btn"
-                    type="button"
-                    data-add-to-cart
-                    data-id="vibe-coconut"
-                    data-name="Vibe / Кокос"
-                    data-price="880"
-                  >
-                    Добавить +
-                  </button>
-                  <div class="product-card__price">880<span>din</span></div>
-                </div>
-              </div>
-            </article>
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-strawberry-size"
+                value="l"
+                data-product-option
+                data-id="vibe-strawberry-l"
+                data-name="Vibe / Клубника / 20 шт"
+                data-price="2680"
+                data-count="20 шт"
+                data-weight="(~1200g)"
+              />
+              <span>20 шт</span>
+            </label>
+          </div>
 
-            <article class="product-card">
-              <div class="product-card__image-wrap">
-                <img
-                  src="./img/vibe_choc.png"
-                  alt="Choc"
-                  class="product-card__image_vibe"
-                />
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__top">
-                  <span class="product-card__count">6 шт</span>
-                  <span class="product-card__weight">(~360g)</span>
-                </div>
-                <div class="product-card__name">Шоколад</div>
-                <div class="product-card__bottom">
-                  <button
-                    class="product-card__btn"
-                    type="button"
-                    data-add-to-cart
-                    data-id="vibe-chocolate"
-                    data-name="Vibe / Шоколад"
-                    data-price="880"
-                  >
-                    Добавить +
-                  </button>
-                  <div class="product-card__price">880<span>din</span></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__image-wrap">
-                <img
-                  src="./img/vibe_pink.png"
-                  alt="Pink"
-                  class="product-card__image_vibe"
-                />
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__top">
-                  <span class="product-card__count">6 шт</span>
-                  <span class="product-card__weight">(~360g)</span>
-                </div>
-                <div class="product-card__name">Малина</div>
-                <div class="product-card__bottom">
-                  <button
-                    class="product-card__btn"
-                    type="button"
-                    data-add-to-cart
-                    data-id="vibe-raspberry"
-                    data-name="Vibe / Малина"
-                    data-price="880"
-                  >
-                    Добавить +
-                  </button>
-                  <div class="product-card__price">880<span>din</span></div>
-                </div>
-              </div>
-            </article>
+          <div class="product-card__name">Клубника</div>
+          <div class="product-card__bottom">
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-default-label="Добавить +"
+              data-id="vibe-strawberry-s"
+              data-name="Vibe / Клубника / 6 шт"
+              data-price="890"
+            >
+              Добавить +
+            </button>
+            <div class="product-card__price">890 <span>din</span></div>
           </div>
         </div>
-      </div>
+      </article>
+
+      <article class="product-card product-card--active">
+        <div class="product-card__image-wrap">
+          <img
+            src="./img/vibe_rise.png"
+            alt="Rais"
+            class="product-card__image_vibe"
+          />
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__top">
+            <span class="product-card__count">6 шт</span>
+            <span class="product-card__weight">(~360g)</span>
+          </div>
+
+          <div class="product-card__sizes" aria-label="Размер набора">
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-raisin-size"
+                value="s"
+                data-product-option
+                data-id="vibe-raisin-s"
+                data-name="Vibe / Изюм / 6 шт"
+                data-price="890"
+                data-count="6 шт"
+                data-weight="(~360g)"
+                checked
+              />
+              <span>6 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-raisin-size"
+                value="m"
+                data-product-option
+                data-id="vibe-raisin-m"
+                data-name="Vibe / Изюм / 12 шт"
+                data-price="1690"
+                data-count="12 шт"
+                data-weight="(~720g)"
+              />
+              <span>12 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-raisin-size"
+                value="l"
+                data-product-option
+                data-id="vibe-raisin-l"
+                data-name="Vibe / Изюм / 20 шт"
+                data-price="2680"
+                data-count="20 шт"
+                data-weight="(~1200g)"
+              />
+              <span>20 шт</span>
+            </label>
+          </div>
+
+          <div class="product-card__name">Изюм</div>
+          <div class="product-card__bottom">
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-default-label="Добавить +"
+              data-id="vibe-raisin-s"
+              data-name="Vibe / Изюм / 6 шт"
+              data-price="890"
+            >
+              Добавить +
+            </button>
+            <div class="product-card__price">890 <span>din</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__image-wrap">
+          <img
+            src="./img/vibe_coco.png"
+            alt="Coco"
+            class="product-card__image_vibe"
+          />
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__top">
+            <span class="product-card__count">6 шт</span>
+            <span class="product-card__weight">(~360g)</span>
+          </div>
+
+          <div class="product-card__sizes" aria-label="Размер набора">
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-coconut-size"
+                value="s"
+                data-product-option
+                data-id="vibe-coconut-s"
+                data-name="Vibe / Кокос / 6 шт"
+                data-price="890"
+                data-count="6 шт"
+                data-weight="(~360g)"
+                checked
+              />
+              <span>6 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-coconut-size"
+                value="m"
+                data-product-option
+                data-id="vibe-coconut-m"
+                data-name="Vibe / Кокос / 12 шт"
+                data-price="1690"
+                data-count="12 шт"
+                data-weight="(~720g)"
+              />
+              <span>12 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-coconut-size"
+                value="l"
+                data-product-option
+                data-id="vibe-coconut-l"
+                data-name="Vibe / Кокос / 20 шт"
+                data-price="2680"
+                data-count="20 шт"
+                data-weight="(~1200g)"
+              />
+              <span>20 шт</span>
+            </label>
+          </div>
+
+          <div class="product-card__name">Кокос</div>
+          <div class="product-card__bottom">
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-default-label="Добавить +"
+              data-id="vibe-coconut-s"
+              data-name="Vibe / Кокос / 6 шт"
+              data-price="890"
+            >
+              Добавить +
+            </button>
+            <div class="product-card__price">890 <span>din</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__image-wrap">
+          <img
+            src="./img/vibe_choc.png"
+            alt="Choc"
+            class="product-card__image_vibe"
+          />
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__top">
+            <span class="product-card__count">6 шт</span>
+            <span class="product-card__weight">(~360g)</span>
+          </div>
+
+          <div class="product-card__sizes" aria-label="Размер набора">
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-chocolate-size"
+                value="s"
+                data-product-option
+                data-id="vibe-chocolate-s"
+                data-name="Vibe / Шоколад / 6 шт"
+                data-price="890"
+                data-count="6 шт"
+                data-weight="(~360g)"
+                checked
+              />
+              <span>6 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-chocolate-size"
+                value="m"
+                data-product-option
+                data-id="vibe-chocolate-m"
+                data-name="Vibe / Шоколад / 12 шт"
+                data-price="1690"
+                data-count="12 шт"
+                data-weight="(~720g)"
+              />
+              <span>12 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-chocolate-size"
+                value="l"
+                data-product-option
+                data-id="vibe-chocolate-l"
+                data-name="Vibe / Шоколад / 20 шт"
+                data-price="2680"
+                data-count="20 шт"
+                data-weight="(~1200g)"
+              />
+              <span>20 шт</span>
+            </label>
+          </div>
+
+          <div class="product-card__name">Шоколад</div>
+          <div class="product-card__bottom">
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-default-label="Добавить +"
+              data-id="vibe-chocolate-s"
+              data-name="Vibe / Шоколад / 6 шт"
+              data-price="890"
+            >
+              Добавить +
+            </button>
+            <div class="product-card__price">890 <span>din</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__image-wrap">
+          <img
+            src="./img/vibe_pink.png"
+            alt="Pink"
+            class="product-card__image_vibe"
+          />
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__top">
+            <span class="product-card__count">6 шт</span>
+            <span class="product-card__weight">(~360g)</span>
+          </div>
+
+          <div class="product-card__sizes" aria-label="Размер набора">
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-raspberry-size"
+                value="s"
+                data-product-option
+                data-id="vibe-raspberry-s"
+                data-name="Vibe / Малина / 6 шт"
+                data-price="890"
+                data-count="6 шт"
+                data-weight="(~360g)"
+                checked
+              />
+              <span>6 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-raspberry-size"
+                value="m"
+                data-product-option
+                data-id="vibe-raspberry-m"
+                data-name="Vibe / Малина / 12 шт"
+                data-price="1690"
+                data-count="12 шт"
+                data-weight="(~720g)"
+              />
+              <span>12 шт</span>
+            </label>
+
+            <label class="product-card__size-option">
+              <input
+                type="radio"
+                name="vibe-raspberry-size"
+                value="l"
+                data-product-option
+                data-id="vibe-raspberry-l"
+                data-name="Vibe / Малина / 20 шт"
+                data-price="2680"
+                data-count="20 шт"
+                data-weight="(~1200g)"
+              />
+              <span>20 шт</span>
+            </label>
+          </div>
+
+          <div class="product-card__name">Малина</div>
+          <div class="product-card__bottom">
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-default-label="Добавить +"
+              data-id="vibe-raspberry-s"
+              data-name="Vibe / Малина / 6 шт"
+              data-price="890"
+            >
+              Добавить +
+            </button>
+            <div class="product-card__price">890 <span>din</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
 
       <div class="catalog__section">
         <div class="catalog__head">
